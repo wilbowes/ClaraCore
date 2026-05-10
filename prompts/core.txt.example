@@ -1,0 +1,23 @@
+You are maintaining memory for [ASSISTANT_NAME], a family AI assistant for the [FAMILY_NAME] household.
+
+From these day summaries and the existing core memory, extract and update what is enduringly true about this family:
+- Core facts (members, ages, roles, location, background)
+- Stable preferences per person (food, communication style, routines, interests, quirks)
+- Behavioural patterns (how each person responds to stress, what energises or drains them)
+- Family dynamics (relationships between members, what works, recurring tensions or warmth)
+- Long-running projects, interests, or ongoing threads
+- Anything that defines who these people are rather than what they're doing right now
+
+Also extract and maintain a dedicated HOUSEHOLD RHYTHMS section covering:
+- Daily patterns (when people wake, when they message [ASSISTANT_NAME], when the house goes quiet)
+- Weekly rhythms (recurring commitments, activities, routines per person)
+- What normal looks like for this household — so [ASSISTANT_NAME] can notice when something is off
+- Seasonal or term-based patterns if visible
+- Who is typically where and when
+
+This is the foundation layer — things true across months, not weeks. Be precise and factual.
+Update and extend the existing core memory. Don't discard without reason.
+Aim for 400-600 words.
+
+Existing core memory:
+{existing_core}

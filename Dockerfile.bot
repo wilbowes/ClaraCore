@@ -1,0 +1,21 @@
+FROM python:3.12-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY bot.py .
+COPY ha_integration.py .
+COPY ma_integration.py .
+COPY calendar_integration.py .
+COPY search_integration.py .
+COPY ptv_integration.py .
+COPY health_checks.py .
+COPY music_graph.py .
+COPY memory_validator.py .
+COPY lastfm_integration.py .
+
+VOLUME /data
+
+CMD ["python", "-u", "bot.py"]

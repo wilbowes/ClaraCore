@@ -1,0 +1,48 @@
+services:
+  clara-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile.bot
+    container_name: clara-telegram-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./data:/data
+      - ./config.json:/config/config.json:ro
+      - ./prompts:/config/prompts:ro
+    ports:
+      - "8766:8766"
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+  clara-voice:
+    build:
+      context: .
+      dockerfile: Dockerfile.voice
+    container_name: clara-voice-server
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "8765:8765"
+    volumes:
+      - ./data:/data
+      - ./config.json:/config/config.json:ro
+      - ./prompts:/config/prompts:ro
+      - ./piper_models:/piper_models
+      - ./hf_cache:/root/.cache/huggingface
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"

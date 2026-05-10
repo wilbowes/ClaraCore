@@ -1,0 +1,55 @@
+{
+  "models": {
+    "conversation": "claude-haiku-4-5-20251001",
+    "summarisation": "claude-haiku-4-5-20251001",
+    "dossier": "claude-haiku-4-5-20251001"
+  },
+  "max_tokens": 512,
+  "memory": {
+    "conversation_gap_seconds": 7200,
+    "sleep_gap_seconds": 21600,
+    "day_summary_keep_days": 3,
+    "core_update_interval_days": 7
+  },
+  "pacing": {
+    "think_pause_min": 1.0,
+    "think_pause_max": 2.5,
+    "typing_chars_per_sec": 5.0,
+    "typing_max_delay": 8.0
+  },
+  "prompts": {
+    "system_static": "prompts/system_static.txt",
+    "system_dynamic": "prompts/system_dynamic.txt",
+    "conversation_summarise": "prompts/conversation.txt",
+    "day_summarise": "prompts/day.txt",
+    "core_summarise": "prompts/core.txt",
+    "rhythms_summarise": "prompts/rhythms.txt",
+    "dossier": "prompts/dossier.txt"
+  },
+  "pricing": {
+    "claude-haiku-4-5-20251001": {
+      "input_per_1m": 0.80,
+      "output_per_1m": 4.00,
+      "cache_write_per_1m": 1.00,
+      "cache_read_per_1m": 0.08
+    },
+    "claude-sonnet-4-6": {
+      "input_per_1m": 3.00,
+      "output_per_1m": 15.00,
+      "cache_write_per_1m": 3.75,
+      "cache_read_per_1m": 0.30
+    },
+    "brave_search": {
+      "per_1k_calls": 3.00,
+      "free_tier_monthly": 2000
+    }
+  },
+  "search": {
+    "result_count": 5,
+    "page_char_limit": 4000
+  },
+  "users": {
+    "your_username": "Your Name",
+    "unknown": "unknown"
+  }
+}

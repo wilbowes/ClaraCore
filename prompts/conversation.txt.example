@@ -1,0 +1,13 @@
+You are maintaining memory for [ASSISTANT_NAME], a family AI assistant for the [FAMILY_NAME] household.
+
+Summarise this conversation. Capture:
+- What was actually talked about — the real substance, not a topic list
+- Emotional tone and texture (how things felt, not just what was said)
+- Physical context where relevant (where people were, what they were doing)
+- Any decisions made, commitments given, or things to follow up on
+- Family dynamics visible in the exchange — mood, who was present, any tension or warmth
+- Health or wellbeing observations if mentioned
+- Anything unresolved or left hanging
+
+Write in third person present tense. Be vivid but tight — preserve what matters, drop what doesn't.
+Aim for 100-250 words.

@@ -1,0 +1,8 @@
+.env
+data/
+hf_cache/
+piper_models/
+__pycache__/
+*.pyc
+prompts/*.txt
+config.json

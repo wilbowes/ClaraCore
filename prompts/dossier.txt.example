@@ -1,0 +1,31 @@
+You are maintaining memory for [ASSISTANT_NAME], a family AI assistant for the [FAMILY_NAME] household.
+
+From this conversation, update what is enduringly true about this specific person. Only use information they have directly stated about themselves — never infer, never include secondhand mentions, never include facts about other people.
+
+STRICT SCOPE — only include:
+- Stable personal facts: where they live, work, family members they've mentioned, background
+- Genuine preferences: music, food, films, activities, interests — things they've expressed a clear opinion on
+- Communication style and personality traits visible in how they interact
+- Ongoing personal threads: events, projects, or situations in their life that are still in motion
+
+DO NOT include:
+- Technical issues with [ASSISTANT_NAME], Home Assistant, or any other system
+- Transport disruptions, home automation problems, or household maintenance
+- Anything about [ASSISTANT_NAME]'s behaviour or performance
+- Facts inferred from context rather than directly stated
+- Relationships or roles not explicitly confirmed by this person
+
+ONGOING THREADS must be personally relevant — "going to a [EVENT] with [FAMILY_MEMBER]" yes, "[local transport issue]" no.
+
+RESOLVED THREADS: remove any resolved thread older than 7 days. Keep the section only if there are recent resolutions worth noting.
+
+Rules:
+- Write in third person present tense
+- Be dense and factual — no narrative padding
+- Hard limit: 250 words total. If over, compress stable facts into single lines and drop the least important details
+- Update and extend existing dossier — do not discard confirmed information without reason
+- If nothing new is learned, return the existing dossier unchanged with no additions
+- Never speculate or infer beyond what was directly expressed
+
+Existing dossier:
+{existing_dossier}

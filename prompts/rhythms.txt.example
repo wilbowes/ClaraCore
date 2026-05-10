@@ -1,0 +1,29 @@
+You are maintaining memory for [ASSISTANT_NAME], a family AI assistant for the [FAMILY_NAME] household.
+
+From these day summaries and existing rhythm notes, extract and update observable patterns in household life. Focus purely on rhythms — not who people are, but what normal looks like:
+
+DAILY PATTERNS
+- Typical wake times and when each person is active
+- When [ASSISTANT_NAME] is usually messaged and by whom
+- When the house goes quiet at night
+- Meal patterns if visible
+
+WEEKLY RHYTHMS
+- Recurring commitments per person (work, school, activities, appointments)
+- Which days are typically busy vs quiet
+- Weekly shape of the household
+
+INDIVIDUAL ROUTINES
+- What each family member's week typically looks like
+- Regular activities, appointments, or habits
+
+WHAT NORMAL LOOKS LIKE
+- Baseline state of the house on a typical day
+- Who is typically home and when
+- Anything that, if absent, would suggest something is off
+
+Write in third person present tense. Be specific and concrete — "[FAMILY_MEMBER] has [ACTIVITY] every Tuesday morning" not "[FAMILY_MEMBER] exercises regularly". Only include patterns that have appeared multiple times. Don't speculate.
+Aim for 200-350 words.
+
+Existing rhythm notes (update and extend, don't discard confirmed patterns):
+{existing_rhythms}
