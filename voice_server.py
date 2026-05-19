@@ -139,6 +139,11 @@ async def handle_client(websocket):
                     log.info("Recording started")
                     reset()
                     recording = True
+                elif message == "END":
+                    log.info(f"VAD end signal — processing (peak RMS {peak_rms:.1f})")
+                    await websocket.send("THINKING")
+                    maybe_process()
+                    reset()
 
             elif isinstance(message, bytes) and recording:
                 audio_chunks.append(message)
